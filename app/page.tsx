@@ -2,6 +2,8 @@ import { supabase } from "@/lib/supabase";
 import QueueForm from "./components/QueueForm";
 import QueueRow from "./components/QueueRow";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const { data: queue } = await supabase
     .from("queue_entries")
